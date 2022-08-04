@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($vendorDir . '/imoisesf/php-classes/src'),
+    'imoisesf\\' => array($vendorDir . '/imoisesf/php-classes/src'),
 );
