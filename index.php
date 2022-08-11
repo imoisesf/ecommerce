@@ -2,20 +2,21 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \imoisesf\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new imoisesf\DB\Sql();
+	$page = new Page();
 
-	$result = $sql->select("SELECT * FROM tb_users");
-
-	echo json_encode($result);
+	$page->setTpl("index");
 
 });
 
 $app->run();
 
- ?>
+?>
