@@ -1,5 +1,5 @@
 <?php
-namespace imoisesF;
+namespace imoisesf;
 
 use Rain\Tpl;
 
@@ -11,13 +11,13 @@ class Page {
         "data"=>[]
     ];
 
-    public function __construct($opts = array())
+    public function __construct($opts = array(), $tpl_dir = "views/user/")
     {
         $this->options = array_merge($this->defaults, $opts);
         //echo $_SERVER["DOCUMENT_ROOT"];
         $config = array(
             "base_url"      => null,
-            "tpl_dir"       => "views/",
+            "tpl_dir"       => $tpl_dir,
             "cache_dir"     => "views-cache/",
             "debug"         => false // set to false to improve the speed
         );
